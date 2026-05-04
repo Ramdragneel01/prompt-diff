@@ -1,0 +1,14 @@
+services:
+  prompt-diff:
+    build: .
+    image: ghcr.io/ramdragneel01/prompt-diff:dev
+    container_name: prompt-diff
+    restart: unless-stopped
+    ports:
+      - "8096:8096"
+    environment:
+      PD_HOST: 0.0.0.0
+      PD_PORT: 8096
+      PD_LOG_LEVEL: INFO
+      PD_FRONTEND_DIR: frontend
+      PD_MAX_PROMPT_CHARS: 20000

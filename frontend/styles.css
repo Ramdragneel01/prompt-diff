@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Fraunces:wght@700&display=swap");
+
+:root {
+  --bg-a: #f8fafc;
+  --bg-b: #ecfeff;
+  --bg-c: #fff7ed;
+  --ink: #0f172a;
+  --muted: #334155;
+  --stroke: #cbd5e1;
+  --panel: rgba(255, 255, 255, 0.86);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+  background: radial-gradient(circle at 20% 10%, var(--bg-b) 0%, var(--bg-a) 45%, var(--bg-c) 100%);
+}
+
+main {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 22px 16px 34px;
+  display: grid;
+  gap: 12px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #0369a1;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 8px 0;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2rem, 4.4vw, 3rem);
+}
+
+.panel {
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  padding: 12px;
+  background: var(--panel);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+}
+
+textarea {
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  padding: 10px;
+  resize: vertical;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(120deg, #0284c7, #2563eb);
+}
+
+pre {
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 360px;
+  overflow: auto;
+}

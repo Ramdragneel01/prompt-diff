@@ -1,0 +1,21 @@
+flowchart LR
+  U[User / CI]
+  API[FastAPI Service]
+  CLI[CLI]
+  UI[Browser UI]
+  ENG[Diff Engine]
+  TOK[Tokenizer]
+  SEM[Semantic Metrics]
+  RISK[Risk Assessor]
+  MET[Prometheus Metrics]
+
+  U --> API
+  U --> CLI
+  U --> UI
+  API --> ENG
+  CLI --> ENG
+  UI --> API
+  ENG --> TOK
+  ENG --> SEM
+  ENG --> RISK
+  API --> MET
