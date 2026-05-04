@@ -1,44 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prompt Diff</title>
     <link rel="stylesheet" href="/ui/styles.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <main>
-      <header>
-        <p class="eyebrow">Semantic Prompt Review</p>
-        <h1>Prompt Diff</h1>
-        <p>Compare baseline vs candidate prompts and surface lexical/semantic drift and risk.</p>
-      </header>
+        <header>
+            <p class="eyebrow">Semantic Prompt Review</p>
+            <h1>Prompt Diff</h1>
+            <p>Compare baseline vs candidate prompts and surface lexical/semantic drift and risk.</p>
+        </header>
 
-      <section class="panel grid2">
-        <label>
-          Baseline Prompt
-          <textarea id="baseline" rows="12" placeholder="paste baseline prompt"></textarea>
-        </label>
-        <label>
-          Candidate Prompt
-          <textarea id="candidate" rows="12" placeholder="paste candidate prompt"></textarea>
-        </label>
-      </section>
+        <section class="panel grid2">
+            <label>
+                Baseline Prompt
+                <textarea id="baseline" rows="12" placeholder="paste baseline prompt"></textarea>
+            </label>
+            <label>
+                Candidate Prompt
+                <textarea id="candidate" rows="12" placeholder="paste candidate prompt"></textarea>
+            </label>
+        </section>
 
-      <section class="panel actions">
-        <button id="compare">Compare</button>
-      </section>
+        <section class="panel actions">
+            <button id="compare">Compare</button>
+        </section>
 
-      <section class="panel">
-        <h2>Summary</h2>
-        <pre id="summary">No result yet.</pre>
-      </section>
+        <section class="panel">
+            <h2>Summary</h2>
+            <pre id="summary">No result yet.</pre>
+        </section>
 
-      <section class="panel">
-        <h2>Unified Diff</h2>
-        <pre id="diff">No result yet.</pre>
-      </section>
+        <section class="panel">
+            <h2>Unified Diff</h2>
+            <pre id="diff">No result yet.</pre>
+        </section>
     </main>
     <script type="module" src="/ui/app.js"></script>
-  </body>
+</body>
+
 </html>
